@@ -115,6 +115,7 @@
         .skill-line b{color:var(--muted);font-weight:900}
         .small{font-size:13px;color:var(--muted)}
 
+        /* Mobile */
         @media(max-width:720px){
             header{flex-direction:column}
             .contact{text-align:left;white-space:normal}
@@ -124,6 +125,7 @@
             .name{font-size:28px}
         }
 
+        /* Print */
         @media print{
             html, body{
                 font-size:12px;
@@ -133,9 +135,23 @@
             .page{margin:0;padding:0}
             .card{box-shadow:none;border:none;border-radius:0;padding:0}
 
+            /* IMPORTANT FIX: print header must be column */
             header{
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+
                 margin-bottom:12px;
                 padding-bottom:12px;
+            }
+
+            .contact{
+                text-align:left;
+                white-space:normal;
+            }
+
+            .contact i{
+                width:14px;
             }
 
             .divider{
@@ -166,7 +182,7 @@
         <header>
             <div>
                 <h1 class="name">MD RASEL AHMED</h1>
-                <p class="headline">Head of Engineering | Backend, Platform, Product Delivery (Laravel, AWS, DevOps)</p>
+                <p class="headline">Head of Engineering</p>
                 <div class="chips">
                     <span class="chip">Engineering Leadership</span>
                     <span class="chip">Enterprise Delivery</span>
@@ -250,7 +266,7 @@
             <article class="job">
                 <div class="job-head">
                     <div>
-                        <p class="job-role">Software Engineer</p>
+                        <p class="job-role">Senior Software Engineer</p>
                         <p class="job-company">Banglafire Solution Limited | Dhaka, Bangladesh</p>
                     </div>
                     <div class="job-meta">Nov 2017 – Nov 2018</div>
