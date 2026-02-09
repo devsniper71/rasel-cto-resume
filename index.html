@@ -22,7 +22,7 @@
             margin:0;
             background:#f8fafc;
             color:var(--text);
-            font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+            font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
             line-height:1.45;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
@@ -51,20 +51,9 @@
             text-align:right;
         }
 
-        .contact a{
-            color:var(--text);
-            text-decoration:none;
-        }
-
-        .contact a:hover{
-            text-decoration:underline;
-        }
-
-        .contact i{
-            width:16px;
-            margin-right:8px;
-            color:var(--soft);
-        }
+        .contact a{color:var(--text);text-decoration:none}
+        .contact a:hover{text-decoration:underline}
+        .contact i{width:16px;margin-right:8px;color:var(--soft)}
 
         h2{
             margin:0 0 10px;
@@ -125,46 +114,85 @@
             .name{font-size:28px}
         }
 
-        /* Print */
+        /* Print (same look, just compact + no header break) */
         @media print{
             html, body{
                 font-size:12px;
                 background:#fff;
+                color:#000;
             }
 
             .page{margin:0;padding:0}
             .card{box-shadow:none;border:none;border-radius:0;padding:0}
 
-            /* IMPORTANT FIX: print header must be column */
             header{
                 flex-direction: column;
                 align-items: flex-start;
-                gap: 10px;
-
-                margin-bottom:12px;
-                padding-bottom:12px;
+                gap: 8px;
+                margin-bottom:10px;
+                padding-bottom:10px;
             }
 
+            /* Make contact look like a clean resume */
             .contact{
                 text-align:left;
                 white-space:normal;
+                font-size:12px;
+                color:#000;
             }
 
+            /* Optional: remove icons for print (looks more professional) */
             .contact i{
-                width:14px;
+                display:none;
+            }
+
+            /* Chips: convert to simple text tags (no pill UI) */
+            .chips{
+                gap:6px;
+                margin-top:6px;
+            }
+
+            .chip{
+                background:transparent;
+                border:none;
+                padding:0;
+                border-radius:0;
+                font-size:12px;
+                font-weight:700;
+                color:#000;
+            }
+
+            /* Add separators between chips */
+            .chip::after{
+                content:" •";
+                font-weight:400;
+            }
+            .chip:last-child::after{
+                content:"";
             }
 
             .divider{
-                margin-top:12px;
-                padding-top:12px;
+                margin-top:10px;
+                padding-top:10px;
+                border-top:1px solid #bbb;
             }
 
             .job{
                 margin-top:10px;
-                padding:12px;
+                padding:10px 0;
+                border:none;
+                border-bottom:1px solid #ddd;
+                border-radius:0;
             }
 
-            h2{font-size:11px}
+            .job:last-child{
+                border-bottom:none;
+            }
+
+            h2{
+                font-size:11px;
+                color:#000;
+            }
 
             a{color:#000;text-decoration:none}
         }
@@ -182,10 +210,9 @@
         <header>
             <div>
                 <h1 class="name">MD RASEL AHMED</h1>
-                <p class="headline">Head of Engineering</p>
+
                 <div class="chips">
                     <span class="chip">Engineering Leadership</span>
-                    <span class="chip">Enterprise Delivery</span>
                     <span class="chip">AWS Infrastructure</span>
                     <span class="chip">CI/CD & DevOps</span>
                     <span class="chip">Security & Reliability</span>
@@ -236,7 +263,7 @@
                     <div class="job-meta">Oct 2023 – Present</div>
                 </div>
                 <ul>
-                    <li>Own backend architecture and platform delivery using Laravel.</li>
+                    <li>Own backend architecture and platform delivery using Laravel 10+.</li>
                     <li>Lead end-to-end feature delivery in collaboration with product and frontend teams.</li>
                     <li>Ensure AWS reliability using S3, RDS, CloudWatch, logging, and monitoring.</li>
                     <li>Improve delivery stability through Dockerized environments and GitHub Actions CI/CD.</li>
@@ -253,7 +280,7 @@
                     <div class="job-meta">Dec 2018 – Sep 2023</div>
                 </div>
                 <ul>
-                    <li>Led engineers across backend, frontend, and QA with ownership of sprint planning and delivery.</li>
+                    <li>Led 10+ engineers across backend, frontend, and QA with ownership of sprint planning and delivery.</li>
                     <li>Technical owner for multiple enterprise products aligned with business roadmaps.</li>
                     <li>Established engineering standards: architecture guidelines, code reviews, and release checklists.</li>
                     <li>Introduced Docker + CI/CD pipelines, improving release confidence and speed.</li>
@@ -272,24 +299,24 @@
                     <div class="job-meta">Nov 2017 – Nov 2018</div>
                 </div>
                 <ul>
-                    <li>Built product features using Laravel and Vue.js.</li>
-                    <li>Worked closely with QA and product teams in sprint-based delivery.</li>
-                    <li>Improved release reliability through better validation workflows.</li>
+                    <li>Delivered production features using Laravel and Vue.js across multiple modules and services.</li>
+                    <li>Collaborated with product, QA, and stakeholders to refine requirements and ensure delivery quality.</li>
+                    <li>Improved release stability by strengthening validation, error handling, and deployment readiness.</li>
                 </ul>
             </article>
 
             <article class="job">
                 <div class="job-head">
                     <div>
-                        <p class="job-role">Software Engineer</p>
+                        <p class="job-role">Senior Software Engineer</p>
                         <p class="job-company">MEDIA365 Limited | Dhaka, Bangladesh</p>
                     </div>
                     <div class="job-meta">Jan 2015 – Oct 2017</div>
                 </div>
                 <ul>
-                    <li>Developed multilingual content platforms with optimized backend logic.</li>
-                    <li>Maintained and modernized legacy systems.</li>
-                    <li>Supported production operations under business deadlines.</li>
+                    <li>Built and maintained multilingual content platforms with optimized backend logic and caching strategies.</li>
+                    <li>Improved performance and maintainability through refactoring, database tuning, and documentation.</li>
+                    <li>Supported production operations including bug triage, incident fixes, and stability improvements.</li>
                 </ul>
             </article>
         </section>
