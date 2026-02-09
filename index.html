@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MD Rasel Ahmed | Head of Engineering Resume</title>
+
+    <!-- Modern icon font (Font Awesome) -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <style>
+        :root{
+            --text:#0f172a;
+            --muted:#475569;
+            --soft:#64748b;
+            --line:#e2e8f0;
+            --chip:#f1f5f9;
+            --bg:#ffffff;
+            --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+        }
+
+        *{ box-sizing:border-box; }
+
+        body{
+            margin:0;
+            background:#f8fafc;
+            color:var(--text);
+            font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+            line-height:1.45;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .page{
+            max-width: 980px;
+            margin: 24px auto;
+            padding: 0 16px;
+        }
+
+        .card{
+            background:var(--bg);
+            border:1px solid var(--line);
+            border-radius: 18px;
+            box-shadow: var(--shadow);
+            padding: 28px 28px;
+        }
+
+        header{
+            display:flex;
+            justify-content:space-between;
+            gap:22px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--line);
+            margin-bottom: 16px;
+        }
+
+        .name{
+            margin:0;
+            font-size: 34px;
+            font-weight: 850;
+            letter-spacing: -0.03em;
+            line-height:1.1;
+        }
+
+        .headline{
+            margin: 8px 0 0 0;
+            font-size: 14px;
+            font-weight: 750;
+            color: var(--muted);
+        }
+
+        .contact{
+            text-align:right;
+            font-size: 13px;
+            color:var(--muted);
+            line-height:1.7;
+            white-space:nowrap;
+        }
+
+        .contact a{
+            color: var(--text);
+            text-decoration:none;
+            border-bottom: 1px solid transparent;
+        }
+
+        .contact a:hover{
+            border-bottom: 1px solid var(--text);
+        }
+
+        .contact i{
+            width: 16px;
+            margin-right: 8px;
+            color: var(--soft);
+        }
+
+        section{ margin-top: 16px; }
+
+        h2{
+            margin:0 0 10px 0;
+            font-size: 12px;
+            font-weight: 900;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--muted);
+        }
+
+        .summary{
+            margin:0;
+            font-size: 14px;
+            color: var(--text);
+        }
+
+        ul{
+            margin: 8px 0 0 0;
+            padding-left: 18px;
+        }
+
+        li{
+            margin: 6px 0;
+            font-size: 14px;
+            color: var(--text);
+        }
+
+        .divider{
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid var(--line);
+        }
+
+        .chips{
+            display:flex;
+            flex-wrap:wrap;
+            gap:8px;
+            margin-top: 10px;
+        }
+
+        .chip{
+            background: var(--chip);
+            border: 1px solid var(--line);
+            color: var(--muted);
+            padding: 6px 10px;
+            border-radius: 999px;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .job{
+            margin-top: 14px;
+            padding: 14px 14px;
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            background: #fff;
+        }
+
+        .job-head{
+            display:flex;
+            justify-content:space-between;
+            gap:16px;
+            align-items:flex-start;
+        }
+
+        .job-role{
+            margin:0;
+            font-size: 15px;
+            font-weight: 900;
+            letter-spacing: -0.01em;
+        }
+
+        .job-company{
+            margin: 2px 0 0 0;
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--muted);
+        }
+
+        .job-meta{
+            text-align:right;
+            font-size: 13px;
+            color: var(--muted);
+            white-space:nowrap;
+        }
+
+        .skills{
+            display:grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px 18px;
+        }
+
+        .skill-line{
+            font-size: 13px;
+            color: var(--text);
+        }
+
+        .skill-line b{
+            color: var(--muted);
+            font-weight: 900;
+        }
+
+        .small{
+            font-size: 13px;
+            color: var(--muted);
+            line-height: 1.55;
+        }
+
+        @media print {
+            body{ background:#fff; }
+            .page{ margin:0; padding:0; max-width:none; }
+            .card{ box-shadow:none; border:none; border-radius:0; padding: 0; }
+            .job{ border: 1px solid #ddd; }
+            a{ text-decoration:none; color:#000; }
+        }
+
+        @page{
+            size: auto;
+            margin: 14mm;
+        }
+    </style>
+</head>
+
+<body>
+<main class="page">
+    <div class="card">
+
+        <!-- HEADER -->
+        <header>
+            <div>
+                <h1 class="name">MD RASEL AHMED</h1>
+                <p class="headline">Head of Engineering | Backend, Platform, Product Delivery (Laravel, AWS, DevOps)</p>
+
+                <div class="chips" aria-label="Top skills">
+                    <span class="chip">Engineering Leadership</span>
+                    <span class="chip">Laravel Architecture</span>
+                    <span class="chip">AWS Infrastructure</span>
+                    <span class="chip">CI/CD and DevOps</span>
+                    <span class="chip">Security-First Delivery</span>
+                </div>
+            </div>
+
+            <div class="contact">
+                <div><i class="fa-solid fa-location-dot"></i>Dhaka, Bangladesh (Open to Remote)</div>
+                <div><i class="fa-solid fa-envelope"></i><a href="mailto:devsniper71@gmail.com">devsniper71@gmail.com</a></div>
+                <div><i class="fa-solid fa-phone"></i>+880 1782-449977</div>
+                <div><i class="fa-brands fa-linkedin"></i><a href="https://linkedin.com/in/devsniper71" target="_blank" rel="noreferrer">linkedin.com/in/devsniper71</a></div>
+                <div><i class="fa-brands fa-github"></i><a href="https://github.com/devsniper71" target="_blank" rel="noreferrer">github.com/devsniper71</a></div>
+            </div>
+        </header>
+
+        <!-- SUMMARY -->
+        <section>
+            <h2>Summary</h2>
+            <p class="summary">
+                Engineering leader with 10+ years of experience building scalable backend systems and leading engineering teams
+                delivering production-grade products. Specialized in Laravel architecture, business-critical domain logic
+                implementation, AWS infrastructure, CI/CD automation, and security-first engineering. Proven record modernizing
+                legacy systems into modular services, improving release velocity, and mentoring teams across Japan, UK, and US.
+            </p>
+        </section>
+
+        <!-- HIGHLIGHTS -->
+        <section class="divider">
+            <h2>Engineering Leadership Highlights</h2>
+            <ul>
+                <li>Led and mentored 10+ engineers across backend, frontend, and QA; improved quality, delivery speed, and ownership culture.</li>
+                <li>Modernized legacy platforms into modular Laravel services and scalable API systems.</li>
+                <li>Implemented Docker + CI/CD pipelines, reducing deployment time by ~60% and improving release confidence.</li>
+                <li>Delivered secure, multilingual, high-availability systems for remote-first international teams.</li>
+                <li>Owned hiring, onboarding, and performance reviews while establishing strong engineering standards.</li>
+            </ul>
+        </section>
+
+        <!-- EXPERIENCE -->
+        <section class="divider">
+            <h2>Work Experience</h2>
+
+            <article class="job">
+                <div class="job-head">
+                    <div>
+                        <p class="job-role">Engineering Lead (Remote)</p>
+                        <p class="job-company">AnySense Inc. | Fukuoka, Japan</p>
+                    </div>
+                    <div class="job-meta">Oct 2023 – Present</div>
+                </div>
+                <ul>
+                    <li>Own backend architecture and delivery of secure APIs and internal services using Laravel 10+.</li>
+                    <li>Translate product requirements and Japanese specifications into scalable workflows and technical execution plans.</li>
+                    <li>Drive AWS-based reliability using S3, RDS, CloudWatch, structured logging, and monitoring.</li>
+                    <li>Improve delivery speed and stability through Dockerized environments and GitHub Actions CI/CD.</li>
+                    <li>Enforce security and engineering standards including OWASP-aligned practices, rate limiting, and auth hardening.</li>
+                </ul>
+            </article>
+
+            <article class="job">
+                <div class="job-head">
+                    <div>
+                        <p class="job-role">Engineering Manager (Backend and Platform)</p>
+                        <p class="job-company">Banglafire Solution Limited | Dhaka, Bangladesh</p>
+                    </div>
+                    <div class="job-meta">Dec 2018 – Sep 2023</div>
+                </div>
+                <ul>
+                    <li>Led and mentored 10+ engineers across backend, frontend, and QA; owned sprint planning, delivery, and technical guidance.</li>
+                    <li>Owned backend architecture for multiple business systems, focusing on maintainable modular design and scalability.</li>
+                    <li>Established engineering standards: API conventions, code review process, release checklist, and clean-code practices.</li>
+                    <li>Introduced CI/CD using Docker + GitHub Actions, reducing deployment time by ~60% and improving release confidence.</li>
+                    <li>Implemented complex business workflows (orders, payments, logistics tracking, notifications, RBAC, reporting).</li>
+                    <li>Improved performance and stability via database indexing, query optimization, and Redis caching strategies.</li>
+                    <li>Strengthened production security using OWASP best practices, JWT/Sanctum authentication, OAuth2, and server hardening.</li>
+                    <li>Owned hiring, onboarding, and performance reviews to scale a high-performing engineering team.</li>
+                </ul>
+            </article>
+
+            <article class="job">
+                <div class="job-head">
+                    <div>
+                        <p class="job-role">Software Engineer</p>
+                        <p class="job-company">Banglafire Solution Limited | Dhaka, Bangladesh</p>
+                    </div>
+                    <div class="job-meta">Nov 2017 – Nov 2018</div>
+                </div>
+                <ul>
+                    <li>Delivered product features using Laravel and Vue.js, working closely with product, QA, and engineering teams.</li>
+                    <li>Supported sprint-based delivery, bug triage, and release cycles with production-quality practices.</li>
+                    <li>Improved release reliability through structured QA collaboration and better validation workflows.</li>
+                </ul>
+            </article>
+
+            <article class="job">
+                <div class="job-head">
+                    <div>
+                        <p class="job-role">Software Engineer</p>
+                        <p class="job-company">MEDIA365 Limited | Dhaka, Bangladesh</p>
+                    </div>
+                    <div class="job-meta">Jan 2015 – Oct 2017</div>
+                </div>
+                <ul>
+                    <li>Built multilingual content platforms with optimized backend logic, caching, and performance improvements.</li>
+                    <li>Maintained and modernized legacy systems, improving documentation and long-term maintainability.</li>
+                    <li>Supported production operations and delivered stable features under business deadlines.</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- IMPACT -->
+        <section class="divider">
+            <h2>Selected Impact Areas</h2>
+            <ul>
+                <li><b>API Architecture:</b> Designed secure REST APIs for e-commerce, logistics, and education platforms.</li>
+                <li><b>IoT and Real-Time Systems:</b> Built event-driven processing with queue/pub-sub patterns for tracking and notifications.</li>
+                <li><b>DevOps Enablement:</b> Containerized stacks, standardized deployment workflows, automated CI/CD pipelines.</li>
+                <li><b>AWS Infrastructure:</b> Delivered production systems on EC2, RDS, and S3 with CloudWatch monitoring.</li>
+                <li><b>Security and Reliability:</b> Improved authentication, rate limiting, logging, monitoring, and system hardening across services.</li>
+            </ul>
+        </section>
+
+        <!-- SKILLS -->
+        <section class="divider">
+            <h2>Technical Skills</h2>
+            <div class="skills">
+                <div class="skill-line"><b>Leadership and Delivery:</b> Team leadership, mentoring, sprint planning, technical roadmapping, cross-functional alignment</div>
+                <div class="skill-line"><b>Backend:</b> PHP, Laravel, REST APIs, microservices, modular architecture, API versioning</div>
+                <div class="skill-line"><b>Databases:</b> MySQL, PostgreSQL, Redis, indexing, query optimization, caching</div>
+                <div class="skill-line"><b>Cloud and DevOps:</b> AWS (EC2, S3, RDS, CloudWatch, Lambda), Docker, Linux, Nginx</div>
+                <div class="skill-line"><b>CI/CD:</b> GitHub Actions, GitLab CI, Bitbucket Pipelines</div>
+                <div class="skill-line"><b>Security:</b> OWASP, JWT, Sanctum, OAuth2, rate limiting, hardening, observability</div>
+                <div class="skill-line"><b>Frontend Collaboration:</b> Vue.js, Next.js, Vite, Jest</div>
+                <div class="skill-line"><b>AI and Automation:</b> OpenAI API, LangChain basics, embeddings and RAG fundamentals</div>
+            </div>
+        </section>
+
+        <!-- EDUCATION -->
+        <section class="divider">
+            <h2>Education</h2>
+            <div class="small">
+                <b>BSc in Computer Science and Engineering</b> | University of Science and Technology, Chittagong<br/>
+                NCPC and ICPC participant · Focus: systems thinking, algorithms, and software engineering
+            </div>
+        </section>
+
+        <!-- CERTIFICATIONS -->
+        <section class="divider">
+            <h2>Certifications</h2>
+            <ul>
+                <li>Advanced Certificate in Management Professionals (ACMP 4.0) | IBA, University of Dhaka (2019)</li>
+                <li>GeneXus 15 Junior Analyst | GeneXus (2019)</li>
+                <li>DEV283x: Introduction to NodeJS | Microsoft (2018)</li>
+            </ul>
+        </section>
+
+    </div>
+</main>
+</body>
+</html>
