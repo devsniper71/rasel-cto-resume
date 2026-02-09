@@ -81,9 +81,31 @@
         }
 
         @media print{
-            body{background:#fff}
+            html, body{
+                font-size: 12px;
+                background:#fff;
+            }
+
             .page{margin:0;padding:0}
             .card{box-shadow:none;border:none;border-radius:0;padding:0}
+
+            header{
+                margin-bottom: 12px;
+                padding-bottom: 12px;
+            }
+
+            .divider{
+                margin-top: 12px;
+                padding-top: 12px;
+            }
+
+            .job{
+                margin-top: 10px;
+                padding: 12px;
+            }
+
+            h2{font-size:11px}
+
             a{color:#000;text-decoration:none}
         }
 
