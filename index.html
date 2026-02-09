@@ -53,6 +53,7 @@
             padding-bottom: 16px;
             border-bottom: 1px solid var(--line);
             margin-bottom: 16px;
+            align-items:flex-start;
         }
 
         .name{
@@ -82,6 +83,7 @@
             color: var(--text);
             text-decoration:none;
             border-bottom: 1px solid transparent;
+            word-break: break-word;
         }
 
         .contact a:hover{
@@ -203,12 +205,38 @@
             line-height: 1.55;
         }
 
+        /* Better responsiveness */
+        @media (max-width: 720px){
+            header{
+                flex-direction: column;
+            }
+            .contact{
+                text-align:left;
+                white-space:normal;
+            }
+            .name{
+                font-size: 28px;
+            }
+            .skills{
+                grid-template-columns: 1fr;
+            }
+            .job-head{
+                flex-direction: column;
+            }
+            .job-meta{
+                text-align:left;
+                white-space:normal;
+            }
+        }
+
+        /* Print */
         @media print {
             body{ background:#fff; }
             .page{ margin:0; padding:0; max-width:none; }
             .card{ box-shadow:none; border:none; border-radius:0; padding: 0; }
             .job{ border: 1px solid #ddd; }
             a{ text-decoration:none; color:#000; }
+            .chip{ border: 1px solid #ddd; }
         }
 
         @page{
@@ -230,10 +258,10 @@
 
                 <div class="chips" aria-label="Top skills">
                     <span class="chip">Engineering Leadership</span>
-                    <span class="chip">Laravel Architecture</span>
+                    <span class="chip">Product Delivery</span>
                     <span class="chip">AWS Infrastructure</span>
                     <span class="chip">CI/CD and DevOps</span>
-                    <span class="chip">Security-First Delivery</span>
+                    <span class="chip">Security and Reliability</span>
                 </div>
             </div>
 
@@ -250,10 +278,9 @@
         <section>
             <h2>Summary</h2>
             <p class="summary">
-                Engineering leader with 10+ years of experience building scalable backend systems and leading engineering teams
-                delivering production-grade products. Specialized in Laravel architecture, business-critical domain logic
-                implementation, AWS infrastructure, CI/CD automation, and security-first engineering. Proven record modernizing
-                legacy systems into modular services, improving release velocity, and mentoring teams across Japan, UK, and US.
+                Engineering leader with 10+ years of experience delivering enterprise-grade software across backend, cloud, and product teams.
+                Specialized in Laravel architecture, business-critical domain logic, AWS infrastructure, CI/CD automation, and security-first engineering.
+                Proven record modernizing legacy systems into scalable services, improving release velocity, and leading distributed teams across Japan, UK, and US.
             </p>
         </section>
 
@@ -261,11 +288,11 @@
         <section class="divider">
             <h2>Engineering Leadership Highlights</h2>
             <ul>
-                <li>Led and mentored 10+ engineers across backend, frontend, and QA; improved quality, delivery speed, and ownership culture.</li>
+                <li>Led cross-functional teams (backend, frontend, QA) and owned delivery execution, sprint planning, and release governance.</li>
+                <li>Owned hiring, onboarding, and performance reviews while building strong engineering standards and culture.</li>
                 <li>Modernized legacy platforms into modular Laravel services and scalable API systems.</li>
                 <li>Implemented Docker + CI/CD pipelines, reducing deployment time by ~60% and improving release confidence.</li>
-                <li>Delivered secure, multilingual, high-availability systems for remote-first international teams.</li>
-                <li>Owned hiring, onboarding, and performance reviews while establishing strong engineering standards.</li>
+                <li>Drove production reliability through monitoring, structured logging, incident handling, and security hardening.</li>
             </ul>
         </section>
 
@@ -284,7 +311,7 @@
                 <ul>
                     <li>Own backend architecture and delivery of secure APIs and internal services using Laravel 10+.</li>
                     <li>Translate product requirements and Japanese specifications into scalable workflows and technical execution plans.</li>
-                    <li>Drive AWS-based reliability using S3, RDS, CloudWatch, structured logging, and monitoring.</li>
+                    <li>Drive AWS-based reliability using S3, RDS, CloudWatch, structured logging, monitoring, and production support practices.</li>
                     <li>Improve delivery speed and stability through Dockerized environments and GitHub Actions CI/CD.</li>
                     <li>Enforce security and engineering standards including OWASP-aligned practices, rate limiting, and auth hardening.</li>
                 </ul>
@@ -299,11 +326,11 @@
                     <div class="job-meta">Dec 2018 – Sep 2023</div>
                 </div>
                 <ul>
-                    <li>Led and mentored 10+ engineers across backend, frontend, and QA; owned sprint planning, delivery, and technical guidance.</li>
-                    <li>Owned backend architecture for multiple business systems, focusing on maintainable modular design and scalability.</li>
+                    <li>Led and mentored 10+ engineers across backend, frontend, and QA; owned sprint planning, delivery, and technical direction.</li>
+                    <li>Acted as the technical owner for multiple enterprise products, aligning architecture and delivery with business roadmap.</li>
                     <li>Established engineering standards: API conventions, code review process, release checklist, and clean-code practices.</li>
                     <li>Introduced CI/CD using Docker + GitHub Actions, reducing deployment time by ~60% and improving release confidence.</li>
-                    <li>Implemented complex business workflows (orders, payments, logistics tracking, notifications, RBAC, reporting).</li>
+                    <li>Designed and implemented complex workflows (orders, payments, logistics tracking, notifications, RBAC, reporting).</li>
                     <li>Improved performance and stability via database indexing, query optimization, and Redis caching strategies.</li>
                     <li>Strengthened production security using OWASP best practices, JWT/Sanctum authentication, OAuth2, and server hardening.</li>
                     <li>Owned hiring, onboarding, and performance reviews to scale a high-performing engineering team.</li>
@@ -345,6 +372,7 @@
         <section class="divider">
             <h2>Selected Impact Areas</h2>
             <ul>
+                <li><b>Enterprise Delivery:</b> Delivered end-to-end backend platforms supporting business-critical workflows.</li>
                 <li><b>API Architecture:</b> Designed secure REST APIs for e-commerce, logistics, and education platforms.</li>
                 <li><b>IoT and Real-Time Systems:</b> Built event-driven processing with queue/pub-sub patterns for tracking and notifications.</li>
                 <li><b>DevOps Enablement:</b> Containerized stacks, standardized deployment workflows, automated CI/CD pipelines.</li>
