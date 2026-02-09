@@ -42,6 +42,13 @@
 
         .name{margin:0;font-size:34px;font-weight:850;letter-spacing:-.03em}
 
+        .headline{
+            margin:6px 0 0;
+            font-size:14px;
+            font-weight:750;
+            color:var(--muted);
+        }
+
         .contact{
             font-size:13px;
             color:var(--muted);
@@ -88,7 +95,6 @@
             border-radius:14px;
             background:#fff;
 
-            /* Print-perfect: do not split job cards across pages */
             break-inside: avoid;
             page-break-inside: avoid;
         }
@@ -113,12 +119,14 @@
             .name{font-size:28px}
         }
 
-        /* Print (same content, more professional for PDF) */
+        /* Print */
         @media print{
             html, body{
                 font-size:12px;
                 background:#fff;
                 color:#000;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
             }
 
             .page{margin:0;padding:0}
@@ -132,7 +140,6 @@
                 padding-bottom:10px;
             }
 
-            /* Print: clean contact */
             .contact{
                 text-align:left;
                 white-space:normal;
@@ -140,12 +147,8 @@
                 color:#000;
             }
 
-            /* Print: hide icons */
-            .contact i{
-                display:none;
-            }
+            .contact i{display:none}
 
-            /* Print: chips become plain text */
             .chips{
                 gap:6px;
                 margin-top:6px;
@@ -183,9 +186,7 @@
                 border-radius:0;
             }
 
-            .job:last-child{
-                border-bottom:none;
-            }
+            .job:last-child{border-bottom:none}
 
             h2{
                 font-size:11px;
@@ -195,7 +196,6 @@
             a{color:#000;text-decoration:none}
         }
 
-        /* Professional print margin */
         @page{margin:14mm}
     </style>
 </head>
@@ -208,6 +208,7 @@
         <header>
             <div>
                 <h1 class="name">MD RASEL AHMED</h1>
+                <p class="headline">Head of Engineering</p>
 
                 <div class="chips">
                     <span class="chip">Engineering Leadership</span>
